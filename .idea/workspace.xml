@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/container" />
@@ -129,6 +132,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lmmbJxhG7qs9VgwkLKy5M9bqde" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -158,10 +162,23 @@
       <workItem from="1608210721421" duration="3281000" />
       <workItem from="1608214385696" duration="2238000" />
       <workItem from="1608219093532" duration="49000" />
+      <workItem from="1608219163990" duration="327000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1608219365359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608219365359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
