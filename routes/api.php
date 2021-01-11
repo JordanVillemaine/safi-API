@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitController;
+use App\Http\Controllers\VisitReportsController;
+use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\PractitionerController;
+use App\Http\Controllers\MedicineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +25,25 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get("visit/{id?}",[VisitController::class,'list']);
 Route::post("visit/add",[VisitController::class,'add']);
+Route::put("visit/update",[VisitController::class,'update']);
+Route::delete("visit/delete/{id}",[VisitController::class,'delete']);
+
+Route::get("visitReports/{id?}",[VisitReportsController::class,'list']);
+Route::post("visitReports/add",[VisitReportsController::class,'add']);
+Route::put("visitReports/update",[VisitReportsController::class,'update']);
+Route::delete("visitReports/delete/{id}",[VisitReportsController::class,'delete']);
+
+Route::get("activity/{id?}",[ActivityController::class,'list']);
+Route::post("activity/add",[ActivityController::class,'add']);
+Route::put("activity/update",[ActivityController::class,'update']);
+Route::delete("activity/delete/{id}",[ActivityController::class,'delete']);
+
+Route::get("practitioner/{id?}",[PractitionerController::class,'list']);
+Route::post("practitioner/add",[PractitionerController::class,'add']);
+Route::put("practitioner/update",[PractitionerController::class,'update']);
+Route::delete("practitioner/delete/{id}",[PractitionerController::class,'delete']);
+
+Route::get("medicine/{id?}",[MedicineController::class,'list']);
+Route::post("medicine/add",[MedicineController::class,'add']);
+Route::put("medicine/update",[MedicineController::class,'update']);
+Route::delete("medicine/delete/{id}",[MedicineController::class,'delete']);
