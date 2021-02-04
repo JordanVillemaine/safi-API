@@ -7,6 +7,7 @@ use App\Http\Controllers\VisitReportsController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\PractitionerController;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,20 @@ use App\Http\Controllers\MedicineController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::group([
+
+    'middleware' => 'api',
+    'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', [\App\Http\Controllers\AuthController::class , 'login']);
+    Route::post('logout', [\App\Http\Controllers\AuthController::class , 'logout']);
+    Route::post('refresh', [\App\Http\Controllers\AuthController::class , 'refresh']);
+    Route::post('me', [\App\Http\Controllers\AuthController::class , 'me']);
+
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -47,3 +62,8 @@ Route::get("medicine/{id?}",[MedicineController::class,'list']);
 Route::post("medicine/add",[MedicineController::class,'add']);
 Route::put("medicine/update",[MedicineController::class,'update']);
 Route::delete("medicine/delete/{id}",[MedicineController::class,'delete']);
+
+Route::get("employee/{id?}",[EmployeeController::class,'list']);
+Route::post("employee/add",[EmployeeController::class,'add']);
+Route::put("employee/update",[EmployeeController::class,'update']);
+Route::delete("employee/delete/{id}",[EmployeeController::class,'delete']);
