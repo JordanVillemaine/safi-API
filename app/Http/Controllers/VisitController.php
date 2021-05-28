@@ -7,10 +7,30 @@ use App\Models\Visit;
 
 class VisitController extends Controller
 {
-    function list($id=null)
+    public function index()
     {
-        return $id?Visit::find($id):Visit::all();
+        return Visit::all();
     }
+
+    public function show($id)
+    {
+
+        $visits = Visit::where('practitioners_id', $id)->get();
+
+
+        foreach ($visits as $visit) {
+            $visit->employee;
+            $visit->visitState;
+            $visit->visitsReports;
+            foreach ($visit->visitsReports as $visitsReport) {
+                $visitsReport->visitReportState;
+            }
+        }
+
+
+        return response()->json($visits);
+    }
+
 
     function add(Request $req)
     {

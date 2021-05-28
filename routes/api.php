@@ -38,7 +38,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("visit/{id?}",[VisitController::class,'list']);
+Route::get("visits",[VisitController::class,'index']);
+Route::get("visit/{id}",[VisitController::class,'show']);
 Route::post("visit/add",[VisitController::class,'add']);
 Route::put("visit/update",[VisitController::class,'update']);
 Route::delete("visit/delete/{id}",[VisitController::class,'delete']);
@@ -65,5 +66,5 @@ Route::delete("medicine/delete/{id}",[MedicineController::class,'delete']);
 
 Route::get("employee/{id?}",[EmployeeController::class,'list']);
 Route::post("employee/add",[EmployeeController::class,'add']);
-Route::put("employee/update",[EmployeeController::class,'update']);
+Route::put("employee/update/{id}",[EmployeeController::class,'update']);
 Route::delete("employee/delete/{id}",[EmployeeController::class,'delete']);

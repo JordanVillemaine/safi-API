@@ -9,7 +9,24 @@ class PractitionerController extends Controller
 {
     function list($id=null)
     {
-        return $id?Practitioner::find($id):Practitioner::all();
+        if ($id === null){
+            $practitioners = Practitioner::all();
+            foreach ($practitioners as $practitioner){
+                $practitioner->visits;
+                foreach ($practitioner->visits as $visit) {
+
+                    $visit->employee;
+                    $visit->visitState;
+                    $visit->visitsReports;
+                    foreach ($visit->visitsReports as $visitsReport) {
+                        $visitsReport->visitReportState;
+                    }
+                }
+            }
+            return response()->json($practitioners);
+        }
+
+        return response()->json(Practitioner::find($id));
     }
 
     function add(Request $req)

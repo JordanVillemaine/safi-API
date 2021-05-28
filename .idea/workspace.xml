@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04437e3-4063-47d5-9491-217b1ce6125d" name="Default Changelist" comment="Ok">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ApplicationsEmployeesPrivilege.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Privilege.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jwt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/EmployeeSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/safi-API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/safi-API.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/VisitReportState.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/VisitState.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ActivityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PractitionerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PractitionerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VisitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VisitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Practitioner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Practitioner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Visit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Visit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/VisitReports.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/VisitReports.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +215,27 @@
       <workItem from="1612192842527" duration="100000" />
       <workItem from="1612254416207" duration="1325000" />
       <workItem from="1612357403482" duration="1746000" />
-      <workItem from="1612443750739" duration="4139000" />
+      <workItem from="1612443750739" duration="5114000" />
+      <workItem from="1612768920126" duration="6974000" />
+      <workItem from="1612797155560" duration="44000" />
+      <workItem from="1612798775697" duration="654000" />
+      <workItem from="1612855141003" duration="3879000" />
+      <workItem from="1612962342935" duration="1322000" />
+      <workItem from="1613381017432" duration="645000" />
+      <workItem from="1613402936085" duration="34000" />
+      <workItem from="1616747336415" duration="907000" />
+      <workItem from="1617782387608" duration="279000" />
+      <workItem from="1619175708528" duration="538000" />
+      <workItem from="1619177524019" duration="1239000" />
+      <workItem from="1619364816337" duration="713000" />
+      <workItem from="1619370782507" duration="754000" />
+      <workItem from="1619702002142" duration="1517000" />
+      <workItem from="1619795067412" duration="871000" />
+      <workItem from="1620034695824" duration="674000" />
+      <workItem from="1621885434173" duration="1242000" />
+      <workItem from="1621970389791" duration="660000" />
+      <workItem from="1622070578366" duration="2128000" />
+      <workItem from="1622122874852" duration="12224000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1608219365359</created>
@@ -244,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610354656506</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ok">
+      <created>1612454817416</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612454817416</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

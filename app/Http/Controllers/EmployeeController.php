@@ -41,24 +41,16 @@ class EmployeeController extends Controller
         }
     }
 
-    function update(Request $req)
+    function update(Request $req,$id)
     {
-        $employee = new Employee;
+        $employee = Employee::find($id);
         $employee->code = $req->code;
-        $employee->leader_id = $req->leader_id;
-        $employee->district_id = $req->district_id;
         $employee->postalCode = $req->postalCode;
         $employee->firstname = $req->firstname;
         $employee->lastname = $req->lastname;
-        $employee->login = $req->login;
-        $employee->password = $req->password;
         $employee->address = $req->address;
         $employee->city = $req->city;
         $employee->phone = $req->phone;
-        $employee->releaseDate = $req->releaseDate;
-        $employee->entryDate = $req->entryDate;
-        $employee->token = $req->token;
-        $employee->timespan = $req->timespan;
         $result = $employee->save();
         if($result)
         {

@@ -12,29 +12,17 @@ class ActivityController extends Controller
         return $id?Activity::find($id):Activity::all();
     }
 
-    function add(Request $req)
+    public function add(Request $request)
     {
-        $activity = new Activity;
-        $activity->employees_id = $req->employees_id;
-        $activity->theme = $req->theme;
-        $activity->request = $req->request;
-        $activity->place = $req->place;
-        $activity->code = $req->code;
-        $activity->creationDate = $req->creationDate;
-        $activity->validationDate = $req->validationDate;
-        $activity->validationDate = $req->validationDate;
-        $activity->allocatedBudget = $req->allocatedBudget;
-        $activity->unit = $req->unit;
-        $activity->activityStates_id = $req->activityStates_id;
-        $result = $activity->save();
-        if ($result)
-        {
-            return ["Resultat" => "Les données ont été enregistrées"];
-        }
-        else
-        {
-            return ["Resultat" => "Opération refusée"];
-        }
+        $activity = new Activity();
+        $activity->theme = $request->input('theme');
+        $activity->request = $request->input('request');
+        $activity->place = $request->input('place');
+        $activity->updated_at = $request->input('updated_at');
+        $activity->created_at = $request->input('created_at');
+        $activity->allocatedBudget = $request->input('allocatedBudget');
+
+        return response()->json($activity->save());
     }
 
     function update(Request $req)
